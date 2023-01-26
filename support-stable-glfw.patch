@@ -1,0 +1,15 @@
+diff --git a/src/rcore.c b/src/rcore.c
+index 118a5736..5e446821 100644
+--- a/src/rcore.c
++++ b/src/rcore.c
+@@ -110,6 +110,10 @@
+ 
+ #include "raylib.h"                 // Declares module functions
+ 
++#if !defined(GLFW_MOUSE_PASSTHROUGH)
++    #define GLFW_MOUSE_PASSTHROUGH      0x0002000D
++#endif
++
+ // Check if config flags have been externally provided on compilation line
+ #if !defined(EXTERNAL_CONFIG_FLAGS)
+     #include "config.h"             // Defines module configuration flags
