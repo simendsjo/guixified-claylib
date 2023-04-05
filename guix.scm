@@ -94,5 +94,5 @@
  (inherit hello)
  (name "claylib")
  (version "0.0")
- (inputs (list claylib-raylib
-               claylib-raygui)))
+ (propagated-inputs (list claylib-raylib
+                          claylib-raygui)))
